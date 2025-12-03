@@ -1,0 +1,2 @@
+# archinstallx
+ My archinstall script
