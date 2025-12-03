@@ -1,0 +1,352 @@
+{
+    "app_config": {
+        "audio_config": {
+            "audio": "pipewire"
+        },
+        "bluetooth_config": {
+            "enabled": true
+        }
+    },
+    "archinstall-language": "English",
+    "auth_config": null,
+    "bootloader_config": {
+        "bootloader": "Systemd-boot",
+        "removable": false,
+        "uki": false
+    },
+    "custom_commands": [
+        "setfont Lat2-Terminus16",
+        "mkdir -p ~/Audio/Projects/'Year - Project'/{Archive,'Mixes & Masters','Project Files',References,Stems}",
+        "mkdir -p ~/Audio/Library/{Documents,Hardware,IR,Loops,MIDI,Plugins/{Linux,Windows},Samples,Software,Soundfonts/{Sf2,Sf3,Sfz},User}",
+        "mkdir -p ~/Devel/Projects",
+        "mkdir -p ~/.sounds/(sf2,sf3,sfz)",
+        "rm -r /Documents/'SFZ instruments'",
+        "mv ~/Documents/Vaporizer2 ~/Audio/Library/Software",
+        "mv ~/Documents/'Surge XT' ~/Audio/Library/Software",
+        "systemctl enable reflector.timer",
+        "systemctl enable geoclue",
+        "systemctl enable tuned",
+        "systemctl enable tuned-ppd",
+        "ln -s /usr/lib/clap ~/.clap",
+        "ln -s /usr/lib/dssi ~/.dssi",
+        "ln -s /usr/lib/ladspa ~/.ladspa",
+        "ln -s /usr/lib/lmms/ladspa ~/.ladspa/lmms",
+        "ln -s /usr/lib/lv2 ~/.lv2",
+        "ln -s /usr/lib/vst ~/.vst",
+        "ln -s /usr/lib/vst3 ~/.vst3"
+    ],
+    "disk_config": {
+        "btrfs_options": {
+            "snapshot_config": {
+                "type": "Snapper"
+            }
+        },
+        "config_type": "default_layout",
+        "device_modifications": [
+            {
+                "device": "/dev/nvme0n1",
+                "partitions": [
+                    {
+                        "btrfs": [],
+                        "dev_path": null,
+                        "flags": [
+                            "boot",
+                            "esp"
+                        ],
+                        "fs_type": "fat32",
+                        "mount_options": [],
+                        "mountpoint": "/boot",
+                        "obj_id": "90facd87-56c8-4c43-9fa5-d9eb2c498b64",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "GiB",
+                            "value": 1
+                        },
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "MiB",
+                            "value": 1
+                        },
+                        "status": "create",
+                        "type": "primary"
+                    },
+                    {
+                        "btrfs": [
+                            {
+                                "mountpoint": "/",
+                                "name": "@"
+                            },
+                            {
+                                "mountpoint": "/home",
+                                "name": "@home"
+                            },
+                            {
+                                "mountpoint": "/var/log",
+                                "name": "@log"
+                            },
+                            {
+                                "mountpoint": "/var/cache/pacman/pkg",
+                                "name": "@pkg"
+                            }
+                        ],
+                        "dev_path": null,
+                        "flags": [],
+                        "fs_type": "btrfs",
+                        "mount_options": [
+                            "compress=zstd"
+                        ],
+                        "mountpoint": null,
+                        "obj_id": "641936e9-6545-4401-8fed-b903e4ea0dc6",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 248983322624
+                        },
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 1074790400
+                        },
+                        "status": "create",
+                        "type": "primary"
+                    }
+                ],
+                "wipe": true
+            }
+        ]
+    },
+    "hostname": "anarchyx",
+    "kernels": [
+        "linux",
+        "linux-zen"
+    ],
+    "locale_config": {
+        "kb_layout": "pt-latin1",
+        "sys_enc": "UTF-8",
+        "sys_lang": "en_US.UTF-8"
+    },
+    "mirror_config": {
+        "custom_repositories": [],
+        "custom_servers": [
+            {
+                "url": "http://anarchyx:8000"
+            }
+        ],
+        "mirror_regions": {
+            "Portugal": [
+                "http://ftp.rnl.tecnico.ulisboa.pt/pub/archlinux/$repo/os/$arch",
+                "https://ftp.rnl.tecnico.ulisboa.pt/pub/archlinux/$repo/os/$arch",
+                "http://glua.ua.pt/pub/archlinux/$repo/os/$arch",
+                "https://glua.ua.pt/pub/archlinux/$repo/os/$arch",
+                "http://mirror.barata.pt/archlinux/$repo/os/$arch",
+                "https://mirror.barata.pt/archlinux/$repo/os/$arch"
+            ]
+        },
+        "optional_repositories": []
+    },
+    "ntp": true,
+    "packages": [
+        "alacarte",
+        "amd-ucode",
+        "atool",
+        "atuin",
+        "bash-completion",
+        "bash-language-server",
+        "bash-preexec",
+        "bemenu",
+        "btop",
+        "btrfs-assistant",
+        "btrfsmaintenance",
+        "catfish",
+        "celluloid",
+        "clang",
+        "cliphist",
+        "cpio",
+        "cups-pdf",
+        "dcraw",
+        "diskonaut",
+        "dnsmasq",
+        "dosfstools",
+        "exfatprogs",
+        "f2fs-tools",
+        "fastfetch",
+        "fd",
+        "ffmpeg4.4",
+        "ffmpegthumbnailer",
+        "file-roller",
+        "nyxt"
+        "firewalld",
+        "fisher",
+        "fzf",
+        "git",
+        "gjs",
+        "gnome-keyring",
+        "gnuplot",
+        "gpart",
+        "gparted",
+        "gradle",
+        "graphviz",
+        "gst-libav",
+        "gst-plugins-bad",
+        "gst-plugins-good",
+        "gst-plugins-ugly",
+        "gstreamer",
+        "gvfs-dnssd",
+        "gvfs-google",
+        "gvfs-mtp",
+        "gvfs-nfs",
+        "gvfs-smb",
+        "harvid",
+        "htop",
+        "imagemagick",
+        "intel-ucode",
+        "iwd",
+        "jq",
+        "kanshi",
+        "keepassxc",
+        "kitty",
+        "libayatana-appindicator",
+        "libdvdcss",
+        "libfido2",
+        "libgepub",
+        "libgsf",
+        "libopenraw",
+        "lightdm-gtk-greeter-settings",
+        "links",
+        "linux-tools",
+        "lrzip",
+        "lua-language-server",
+        "lz4",
+        "lzip",
+        "lzop",
+        "man-db",
+        "modemmanager",
+        "mpc",
+        "mpd",
+        "mpd-mpris",
+        "mpv-mpris",
+        "mtools",
+        "nano-syntax-highlighting",
+        "ncmpcpp",
+        "neovide",
+        "neovim-plugins",
+        "networkmanager-openvpn",
+        "ntfs-3g",
+        "ocl-icd",
+        "octave",
+        "opencl-mesa",
+        "openssh",
+        "otf-font-awesome",
+        "pacman-contrib",
+        "pacrunner",
+        "pkgfile",
+        "plocate",
+        "python-librosa",
+        "python-lsp-server",
+        "python-pygments",
+        "python-pynvim",
+        "qt5-multimedia",
+        "qt5-tools",
+        "qt5-wayland",
+        "qt5ct",
+        "qt6-wayland",
+        "qt6ct",
+        "quickshell",
+        "realtime",
+        "resvg",
+        "ripgrep",
+        "rtaudio",
+        "rust-analyzer",
+        "sane-airscan",
+        "smartmontools",
+        "snap-pac",
+        "stk",
+        "stk-docs",
+        "strace",
+        "swappy",
+        "swig",
+        "sysbench",
+        "system-config-printer",
+        "systemtap",
+        "terminus-font",
+        "texlab",
+        "texlive-fontutils",
+        "texlive-pstricks",
+        "tgpt",
+        "thunar-shares-plugin",
+        "thunar-vcs-plugin",
+        "tldr",
+        "tombi",
+        "ttf-terminus-nerd",
+        "tumbler",
+        "tuned",
+        "tuned-ppd",
+        "ueberzugpp",
+        "unarj",
+        "unrar",
+        "vamp-aubio-plugins",
+        "vamp-plugins",
+        "vim",
+        "vim-plugins",
+        "vim-spell-en",
+        "vim-spell-pt",
+        "vscode-css-languageserver",
+        "vscode-html-languageserver",
+        "wallutils",
+        "wf-recorder",
+        "wget",
+        "wireless_tools",
+        "wlr-randr",
+        "wofi",
+        "x11-ssh-askpass",
+        "xclip",
+        "xiccd",
+        "xjadeo",
+        "xorg-xhost",
+        "yaml-language-server",
+        "yazi",
+        "yt-dlp",
+        "zeitgeist",
+        "zoxide"
+        
+    ],
+    "parallel_downloads": 0,
+    "profile_config": {
+        "gfx_driver": "All open-source",
+        "greeter": "lightdm-gtk-greeter",
+        "profile": {
+            "custom_settings": {
+                "Labwc": {
+                    "seat_access": "polkit"
+                },
+                "Niri": {
+                    "seat_access": "polkit"
+                },
+                "Xfce4": {}
+            },
+            "details": [
+                "Xfce4",
+                "Niri",
+                "Labwc"
+            ],
+            "main": "Desktop"
+        }
+    },
+    "script": null,
+    "services": [],
+    "swap": true,
+    "timezone": "Europe/Lisbon",
+    "version": "3.0.14"
+}
