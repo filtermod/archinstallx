@@ -147,6 +147,7 @@
     "ntp": true,
     "packages": [
         "amd-ucode",
+        "firewalld",
         "thunar-shares-plugin",
         "thunar-vcs-plugin"
 	],
