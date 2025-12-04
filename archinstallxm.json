@@ -148,7 +148,7 @@
     "packages": [
         "amd-ucode",
         "thunar-shares-plugin",
-        "thunar-vcs-plugin",
+        "thunar-vcs-plugin"
 	],
     "parallel_downloads": 0,
     "profile_config": {
