@@ -22,7 +22,7 @@
 		"chown root:sambashare /var/lib/samba/usershares",
 		"chmod 1777 /var/lib/samba/usershares",
 		"gpasswd sambashare -a anglo",
-        "firewall-cmd --permanent --add-service={samba,samba-client,samba-dc} --zone=home",
+        "firewall-cmd --permanent --add-service={samba,samba-client,samba-dc} --zone=home"
     ],
     "disk_config": {
         "btrfs_options": {
