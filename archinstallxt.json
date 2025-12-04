@@ -19,17 +19,7 @@
         "mkdir -p ~/Audio/Projects/'Year - Project'/{Archive,'Mixes & Masters','Project Files',References,Stems}",
         "mkdir -p ~/Audio/Library/{Documents,Hardware,IR,Loops,MIDI,Plugins/{Linux,Windows},Samples,Software,Soundfonts/{Sf2,Sf3,Sfz},User}",
         "mkdir -p ~/Devel/Projects",
-        "mkdir -p ~/.sounds/(sf2,sf3,sfz)",
-        "rm -r /Documents/'SFZ instruments'",
-        "mv ~/Documents/Vaporizer2 ~/Audio/Library/Software",
-        "mv ~/Documents/'Surge XT' ~/Audio/Library/Software",
-        "ln -s /usr/lib/clap ~/.clap",
-        "ln -s /usr/lib/dssi ~/.dssi",
-        "ln -s /usr/lib/ladspa ~/.ladspa",
-        "ln -s /usr/lib/lmms/ladspa ~/.ladspa/lmms",
-        "ln -s /usr/lib/lv2 ~/.lv2",
-        "ln -s /usr/lib/vst ~/.vst",
-        "ln -s /usr/lib/vst3 ~/.vst3"
+        "mkdir -p ~/.sounds/{sf2,sf3,sfz}",
     ],
     "disk_config": {
         "btrfs_options": {
