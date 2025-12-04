@@ -184,6 +184,7 @@
         "firewalld",
         "fisher",
         "fzf",
+        "geoclue",
         "git",
         "gjs",
         "gnome-keyring",
