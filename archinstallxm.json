@@ -23,11 +23,7 @@
 		"chmod 1777 /var/lib/samba/usershares",
 		"gpasswd sambashare -a anglo",
         "firewall-cmd --permanent --add-service={samba,samba-client,samba-dc} --zone=home",
-        "mkdir -p /home/anglo/Audio/Projects/'Year - Project'/{Archive,'Mixes & Masters','Project Files',References,Stems}",
-        "mkdir -p /home/anglo/Library/{Documents,Hardware,IR,Loops,MIDI,Plugins/{Linux,Windows},Samples,Software,Soundfonts/{Sf2,Sf3,Sfz},User}",
-        "mkdir -p /home/anglo/Devel/Projects",
-        "mkdir -p /home/anglo/.sounds/{sf2,sf3,sfz}"
-	],
+    ],
     "disk_config": {
         "btrfs_options": {
             "snapshot_config": {
