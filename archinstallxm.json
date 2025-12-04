@@ -165,7 +165,7 @@
                 "Xfce4": {}
             },
             "details": [
-                "Xfce4",
+                "Xfce4"
             ],
             "main": "Desktop"
         }
@@ -174,7 +174,7 @@
     "services": [
 		"avahi-daemon",
 		"nmb",
-        "smb",
+        "smb"
         ],
     "swap": true,
     "timezone": "Europe/Lisbon",
